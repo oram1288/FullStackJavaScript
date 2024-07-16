@@ -80,7 +80,7 @@ router.post("/", async (req, res) => {
 // PUT, PATCH, and DELETE are part of HTTP, not a part of HTML
 // Therefore, <form method="PUT" ...> doesn't work, but it does work for RESTful API
 
-// PUT
+// PUT "edit"
 router.put("/:id", async (req, res) => {
   if (DEBUG) console.log("actors.PUT: " + req.params.id);
   try {
@@ -96,7 +96,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// PATCH
+// PATCH "replace"
 router.patch("/:id", async (req, res) => {
   if (DEBUG) console.log("actors.PATCH: " + req.params.id);
   try {
